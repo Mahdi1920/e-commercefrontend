@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
+    "types": ["node"],
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
@@ -19,6 +20,35 @@
       }
     ],
     "paths": {
+      "next": ["./node_modules/next"],
+      "next/*": ["./node_modules/next/*"],
+      "socket.io-client": ["./node_modules/socket.io-client"],
+      "react": ["./node_modules/@types/react/index.d.ts"],
+      "react/*": ["./node_modules/@types/react/*"],
+      "react-dom": ["./node_modules/@types/react-dom/index.d.ts"],
+      "react-dom/*": ["./node_modules/@types/react-dom/*"],
+      "axios": ["./node_modules/axios/index.d.ts"],
+      "zod": ["./node_modules/zod/index.d.ts"],
+      "@mui/material": ["./node_modules/@mui/material"],
+      "@mui/material/*": ["./node_modules/@mui/material/*"],
+      "@mui/material/styles": [
+        "./node_modules/@mui/material/styles/index.d.ts"
+      ],
+      "@mui/icons-material/*": ["./node_modules/@mui/icons-material/*"],
+      "@/api/*": ["../libs/frontend-shared/src/api/*"],
+      "@/api/clients": ["../libs/frontend-shared/src/api/clients.ts"],
+      "@/assets/*": ["../libs/frontend-shared/src/assets/*"],
+      "@/components/*": ["../libs/frontend-shared/src/components/*"],
+      "@/context/*": ["../libs/frontend-shared/src/context/*"],
+      "@/enums": ["../libs/frontend-shared/src/enums/index.ts"],
+      "@/enums/*": ["../libs/frontend-shared/src/enums/*"],
+      "@/hooks/*": ["../libs/frontend-shared/src/hooks/*"],
+      "@/lib/*": ["../libs/frontend-shared/src/lib/*"],
+      "@/models/*": ["../libs/frontend-shared/src/models/*"],
+      "@/theme/*": ["../libs/frontend-shared/src/theme/*"],
+      "@/types/*": ["../libs/frontend-shared/src/types/*"],
+      "@/validators/*": ["../libs/frontend-shared/src/validators/*"],
+      "@shared/*": ["../libs/frontend-shared/src/*"],
       "@/*": ["./src/*"]
     }
   },
@@ -30,5 +60,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "admin-app"]
 }

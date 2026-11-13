@@ -1,0 +1,32 @@
+{
+  "name": "frontend",
+  "projectType": "application",
+  "sourceRoot": "e-commercefrontend/src",
+  "tags": ["scope:storefront", "type:application"],
+  "implicitDependencies": ["frontend-shared"],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{projectRoot}/.next"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "e-commercefrontend"
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "continuous": true,
+      "options": {
+        "command": "npm run dev",
+        "cwd": "e-commercefrontend"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run lint",
+        "cwd": "e-commercefrontend"
+      }
+    }
+  }
+}
